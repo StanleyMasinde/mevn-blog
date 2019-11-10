@@ -1,13 +1,17 @@
 var mysql = require('mysql')
 var config = require('../config')
-var connection = mysql.createConnection({
-  host: config.DATABASE_HOST,
-  user: config.DATABASE_USERNAME,
-  password: config.DATABASE_PASSWORD,
-  database: config.DATABASE
+const knex = require('knex')({
+  client: 'mysql',
+  connection: {
+    host: config.DATABASE_HOST,
+    user: config.DATABASE_USERNAME,
+    password: config.DATABASE_PASSWORD,
+    database: config.DATABASE,
+    charset: 'utf8'
+  }
 })
 
-connection.connect()
+const bookshelf = require('bookshelf')(knex)
 
 // connection.query('SELECT * FROM innovators', function (err, rows, fields) {
 //   if (err) throw err
@@ -15,4 +19,4 @@ connection.connect()
 //   console.log('The solution is: ', rows[0].company_name)
 // })
 
-module.exports = connection
+module.exports = bookshelf
