@@ -3,7 +3,7 @@
  */
 var bookshelf = require('../database/database')
 
-const Post = bookshelf.Model('Post', {
+const Post = bookshelf.model('Post', {
     tableName: 'posts'
 })
 
