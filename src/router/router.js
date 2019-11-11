@@ -6,7 +6,7 @@ import Vue from "vue";
 import Router from "vue-router";
 // import Meta from 'vue-meta'
 import routes from './routes'
-// import store from '../vuex/store'
+import store from '../vuex/store'
 
 // Vue.use(Meta)
 
@@ -23,7 +23,7 @@ const router = new Router({
  * to a loading state
  */
 router.beforeEach((to, from, next) => {
-    // store.state.loading = true
+    store.state.loading = true
     return next(true)
 })
 
@@ -33,7 +33,7 @@ router.beforeEach((to, from, next) => {
  * stop the loader
  */
 router.afterEach((to, from) => {
-    // store.state.loading = false
+    store.state.loading = false
     return true
 })
 

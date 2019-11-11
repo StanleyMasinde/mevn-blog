@@ -53,7 +53,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: "Sign Up"
+  }
+};
 </script>
 
 <style scoped>

@@ -7,7 +7,7 @@
             <a class="text-muted" href="#">Subscribe</a>
           </div>
           <div class="col-4 text-center">
-            <a class="blog-header-logo text-dark" href="#">Large</a>
+            <a class="blog-header-logo text-dark" href="#">Blog</a>
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
             <a class="text-muted" href="#">
@@ -31,7 +31,12 @@
               </svg>
             </a>
             <router-link to="/register" v-slot="{ href, route, navigate, isActive, isExactActive }">
-              <a class="btn btn-sm" :class="isExcatActive ? 'btn-success': 'btn-outline-secondary'" :href="href" @click="navigate">Sign up</a>
+              <a
+                class="btn btn-sm"
+                :class="isActive ? 'btn-success': 'btn-outline-secondary'"
+                :href="href"
+                @click="navigate"
+              >Sign up</a>
             </router-link>
           </div>
         </div>
@@ -314,7 +319,12 @@
 </template>
 
 <script>
-export default {};
+export default {
+  metaInfo: {
+    // if no subcomponents specify a metaInfo.title, this title will be used
+    title: "Welcome"
+  }
+};
 </script>
 
 <style>
