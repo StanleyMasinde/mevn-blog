@@ -1,14 +1,10 @@
 <template>
   <div class="text-center">
     <form class="form-signin">
-      <img
-        class="mb-4"
-        src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg"
-        alt
-        width="72"
-        height="72"
-      />
+      <router-link class="btn btn-outline-info" to="/">Home</router-link>
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+
+      <div class="form-group">
       <label for="inputEmail" class="sr-only">Email address</label>
       <input
         type="email"
@@ -18,6 +14,9 @@
         required
         autofocus
       />
+      </div>
+
+      <div class="form-group">
       <label for="inputPassword" class="sr-only">Password</label>
       <input
         type="password"
@@ -26,6 +25,7 @@
         placeholder="Password"
         required
       />
+      </div>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me" /> Remember me
@@ -53,34 +53,34 @@ export default {
 <style scoped>
 html,
 body {
-  height: 100%;
+  height: 100%!important;
 }
 
 body {
   display: -ms-flexbox;
-  display: flex;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 40px;
-  padding-bottom: 40px;
-  background-color: #f5f5f5;
+  display: flex!important;
+  -ms-flex-align: center!important;
+  align-items: center!important;
+  padding-top: 40px!important;
+  padding-bottom: 40px!important;
+  background-color: #f5f5f5!important;
 }
 
 .form-signin {
-  width: 100%;
-  max-width: 330px;
-  padding: 15px;
-  margin: auto;
+  width: 100%!important;
+  max-width: 330px!important;
+  padding: 15px!important;
+  margin: auto!important;
 }
 .form-signin .checkbox {
-  font-weight: 400;
+  font-weight: 400!important;
 }
 .form-signin .form-control {
-  position: relative;
-  box-sizing: border-box;
-  height: auto;
-  padding: 10px;
-  font-size: 16px;
+  position: relative!important;
+  box-sizing: border-box!important;
+  height: auto!important;
+  padding: 10px!important;
+  font-size: 16px!important;
 }
 .form-signin .form-control:focus {
   z-index: 2;
