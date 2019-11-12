@@ -6,10 +6,11 @@
 
     <footer class="blog-footer">
       <p>
-        Blog template built for
-        <a href="https://getbootstrap.com/">Bootstrap</a> by
-        <a href="https://twitter.com/mdo">@mdo</a>.
+        Blog Designed with ❤️ by
+        <a href="https://stanleymasinde.tech">Stanley Masinde</a> by
+        <a href="https://twitter.com/StanleyMasinde_">@StanleyMasinde_</a>.
       </p>
+      <p class="mt-5 mb-3 text-muted">&copy; {{ new Date().getFullYear() }}</p>
       <p>
         <a href="#">Back to top</a>
       </p>
