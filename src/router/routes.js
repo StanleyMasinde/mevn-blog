@@ -29,6 +29,14 @@ let routes = [
         component: path('Register'),
         beforeEnter: middleware.guest
     },
+    /**
+     * Has to be the last path
+     */
+    {
+        path: "*",
+        name: 'Not Found',
+        component: path('404')
+    }
 ];
 
 export default routes;
