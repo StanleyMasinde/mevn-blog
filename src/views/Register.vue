@@ -64,7 +64,8 @@
 export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "Sign Up"
+    title: "Sign Up",
+    meta: [{ name: "description", content: "Create your account today" }]
   }
 };
 </script>

@@ -322,7 +322,11 @@
 export default {
   metaInfo: {
     // if no subcomponents specify a metaInfo.title, this title will be used
-    title: "Welcome"
+    title: "Welcome",
+    titleTemplate: null,
+    meta: [
+      { name: 'description', content: 'Welcome to my blog' }
+    ]
   }
 };
 </script>
