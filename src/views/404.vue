@@ -10,6 +10,14 @@
       <li>a mistyped address</li>
       <li>an out-of-date link</li>
     </ul>
+    <router-link to="/" v-slot="{ href, route, navigate, isActive, isExactActive }">
+      <a
+        class="btn btn-sm"
+        :class="isActive ? 'btn-success': 'btn-outline-secondary'"
+        :href="href"
+        @click="navigate"
+      >Take Me Home</a>
+    </router-link>
   </div>
 </template>
 

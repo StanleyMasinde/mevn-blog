@@ -55,9 +55,7 @@
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
       or
-      <router-link to="/login" v-slot="{ href, route, navigate, isActive, isExactActive }">
-        <a class="btn btn-lg btn-success btn-block" :href="href" type="submit">Login</a>
-      </router-link>
+      <router-link to="/login">Login</router-link>
     </form>
   </div>
 </template>

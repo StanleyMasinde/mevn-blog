@@ -33,8 +33,8 @@
       </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       or
-      <router-link to="/register" v-slot="{ href, route, navigate, isActive, isExactActive }">
-        <a class="btn btn-lg btn-success btn-block" :href="href" type="submit">Sign Up</a>
+      <router-link to="/register">
+        Sign Up
       </router-link>
       <p class="mt-5 mb-3 text-muted">&copy; 2017-2019</p>
     </form>
