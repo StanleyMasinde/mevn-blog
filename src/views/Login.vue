@@ -1,7 +1,6 @@
 <template>
   <div class="text-center">
     <form class="form-signin">
-      <router-link class="btn btn-outline-info" to="/">Home</router-link>
       <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
 
       <div class="form-group">

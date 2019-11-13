@@ -1,6 +1,56 @@
 <template>
   <main>
     <vue-progress-bar></vue-progress-bar>
+    <div class="container">
+      <header class="blog-header py-3">
+        <div class="row flex-nowrap justify-content-between align-items-center">
+          <div class="col-4 pt-1">
+            <a class="text-muted" href="#">Subscribe</a>
+          </div>
+          <div class="col-4 text-center">
+            <router-link to="/" class="blog-header-logo text-dark">Blog</router-link>
+          </div>
+          <div class="col-4 d-flex justify-content-end align-items-center">
+            <a class="text-muted" href="#">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="mx-3"
+                role="img"
+                viewBox="0 0 24 24"
+                focusable="false"
+              >
+                <title>Search</title>
+                <circle cx="10.5" cy="10.5" r="7.5" />
+                <path d="M21 21l-5.2-5.2" />
+              </svg>
+            </a>
+            <router-link to="/login" v-slot="{ href, route, navigate, isActive, isExactActive }">
+              <a
+                class="btn btn-sm m-1"
+                :class="isActive ? 'btn-primary': 'btn-link'"
+                :href="href"
+                @click="navigate"
+              >Sign In</a>
+            </router-link>
+            <router-link to="/register" v-slot="{ href, route, navigate, isActive, isExactActive }">
+              <a
+                class="btn btn-sm"
+                :class="isActive ? 'btn-success': 'btn-outline-secondary'"
+                :href="href"
+                @click="navigate"
+              >Sign up</a>
+            </router-link>
+          </div>
+        </div>
+      </header>
+    </div>
     <router-view></router-view>
     <!-- /.container -->
 
