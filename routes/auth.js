@@ -4,12 +4,11 @@ var User = require('../app/User')
 
 
 router.post('/login', function (req, res, next) {
-    res.cookie('XSRF-TOKEN', req.csrfToken())
-   new User()
-   .fetchAll()
-   .then(user => {
-        res.json(user)
-    })
+    //login user
+})
+
+router.post('/register', function (req, res, next) {
+    //register a user
 })
 
 module.exports = router
