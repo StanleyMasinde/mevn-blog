@@ -29,6 +29,11 @@ let routes = [
         component: path('Register'),
         beforeEnter: middleware.guest
     },
+    {
+        path: "/posts/:post",
+        name: "Blog Post",
+        component: path('ViewPost')
+    },
     /**
      * Has to be the last path
      */
