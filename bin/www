@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('capstone:server');
+var debug = require('debug')('mevn-blog:server');
 var http = require('http');
 
 /**
