@@ -18,11 +18,11 @@ router.post('/:version/register', function (req, res, next) {
     res.json('Register')
 });
 
-router.post('/:version/posts', function (req, res, next) {
+router.get('/:version/posts', function (req, res, next) {
     res.json('posts')
 });
 
-router.post('/:version/posts/:slug', function (req, res, next) {
+router.get('/:version/posts/:slug', function (req, res, next) {
     res.json('Post')
 });
 

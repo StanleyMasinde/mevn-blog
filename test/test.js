@@ -65,7 +65,7 @@ describe('API AUTH LINKS', () => {
 
 describe('API POSTS', () => {
     it('Should accept a get request for all posts', done => {
-        chai.request(server).post('/api/v1/posts').end((err, result) => {
+        chai.request(server).get('/api/v1/posts').end((err, result) => {
             result.should.have.status(200)
             done(err)
         })
@@ -73,7 +73,7 @@ describe('API POSTS', () => {
     })
 
     it('Should accept a get request for a particular post', done => {
-        chai.request(server).post('/api/v1/posts/slug').end((err, result) => {
+        chai.request(server).get('/api/v1/posts/slug').end((err, result) => {
             result.should.have.status(200)
             done(err)
         })
