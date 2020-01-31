@@ -20,3 +20,63 @@ describe('APPLICATION REQUESTS', () => {
         })
     })
 })
+
+describe('API TESTS', () => {
+    it('Should respond with 200', (done) => {
+        chai.request(server).get('/api/V1').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+    })
+    it('Should be of type JSON', (done) => {
+        chai.request(server).get('/api/v1').end((err, result) => {
+            result.should.have.json
+            done(err)
+        })
+    })
+
+})
+
+describe('API AUTH LINKS', () => {
+    it('Login should accept post requests', done => {
+        chai.request(server).post('/api/v1/login').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+
+    })
+
+    it('Register should accept post requests', done => {
+        chai.request(server).post('/api/v1/register').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+
+    })
+
+    it('Password Reset should accept post requests', done => {
+        chai.request(server).post('/api/v1/password/reset').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+
+    })
+})
+
+describe('API POSTS', () => {
+    it('Should accept a get request for all posts', done => {
+        chai.request(server).post('/api/v1/posts').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+
+    })
+
+    it('Should accept a get request for a particular post', done => {
+        chai.request(server).post('/api/v1/posts/slug').end((err, result) => {
+            result.should.have.status(200)
+            done(err)
+        })
+
+    })
+})
