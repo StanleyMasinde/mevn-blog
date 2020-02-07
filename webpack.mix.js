@@ -20,3 +20,6 @@ mix.options({
     processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
     purifyCss: false, // Remove unused CSS selectors.
 });
+
+mix.browserSync('localhost:3005');
+mix.setPublicPath('public');
