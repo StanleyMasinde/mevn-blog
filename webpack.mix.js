@@ -16,10 +16,10 @@ mix.js('src/app.js', 'public/js/')
 
 //mix.version(); // Enable versioning.
 mix.options({
-    extractVueStyles: false, // Extract .vue component styling to file, rather than inline.
+    extractVueStyles: true, // Extract .vue component styling to file, rather than inline.
     processCssUrls: true, // Process/optimize relative stylesheet url()'s. Set to false, if you don't want them touched.
     purifyCss: false, // Remove unused CSS selectors.
 });
 
-mix.browserSync('localhost:3005');
+// mix.browserSync('localhost:3005');
 mix.setPublicPath('public');

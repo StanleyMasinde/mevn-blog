@@ -1,16 +1,15 @@
+import Vue from 'vue'
 /**
  * Load a view file
  */
 
-const path = (view) => {
-    return () => import(/* webpackChunkName: "js/pages/page" */ `../pages/${view}`)
-}
+const path = (view) => require(/* webpackChunkName: "js/pages/page" */ `../pages/${view}.vue`).default
 
 const routes = [
     {
         path: "/",
         name: "Welcome",
-        component: require('../pages/Welcome.vue').default
+        component: Vue.component('welcome', require('../pages/Welcome.vue').default)
     },
     {
         path: "/login",
