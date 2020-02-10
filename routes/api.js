@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var Post = require('../app/models/Post')
 
 //The root of the api it does nothing
 router.get('/:version', function (req, res, next) {
@@ -19,7 +20,11 @@ router.post('/:version/register', function (req, res, next) {
 });
 
 router.get('/:version/posts', function (req, res, next) {
-    res.json('posts')
+    Post.all().then(posts => {
+        res.json(posts)
+    }).catch(err => {
+        res.json(err)
+    })
 });
 
 router.get('/:version/posts/:slug', function (req, res, next) {

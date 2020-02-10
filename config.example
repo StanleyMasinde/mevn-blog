@@ -1,0 +1,12 @@
+/**
+ * Application Config
+ */
+const config = {
+    APP_NAME: 'Blog',
+    DATABASE_HOST: 'localhost',
+    DATABASE_USER: 'root',
+    DATABASE_NAME: 'blog',
+    DATABASE_PASSWORD: ''
+}
+
+module.exports = Object.freeze(config)

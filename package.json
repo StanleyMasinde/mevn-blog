@@ -14,12 +14,15 @@
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
+    "bcrypt": "^3.0.8",
     "bootstrap-vue": "^2.4.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "ejs": "^3.0.1",
     "express": "~4.16.1",
     "morgan": "~1.9.1",
+    "mysql": "^2.18.1",
+    "pluralize": "^8.0.0",
     "vue": "^2.6.11",
     "vue-router": "^3.1.5",
     "vuex": "^3.1.2"

@@ -1,0 +1,17 @@
+{
+    "name": "model",
+    "version": "1.0.0",
+    "private": true,
+    "keywords": [
+        "ORM",
+        "Model"
+    ],
+    "author": {
+        "name": "Stanley Masinde",
+        "email": "stanleyloren@gmail.com"
+    },
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "license": "MIT"
+}
