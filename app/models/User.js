@@ -1,4 +1,5 @@
 var Model = require('./model/Model')
+var passport = require('passport')
 
 
 class User extends Model {
@@ -7,5 +8,23 @@ class User extends Model {
         'email',
         'password'
     ]
+
+    /**
+     * Logs in a user
+     * @param {Array} user 
+     */
+    login(user) {
+        passport.authenticate('local')
+    }
+
+    /**
+     * 
+     * @param {Array} user 
+     */
+    register(user) {
+
+    }
+
 }
+
 module.exports = User

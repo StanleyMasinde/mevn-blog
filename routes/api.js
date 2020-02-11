@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var Post = require('../app/models/Post')
+var User = require('../app/models/User')
+var Validator = require('../app/validator/validator')
 
 //The root of the api it does nothing
 router.get('/:version', function (req, res, next) {
@@ -16,7 +18,26 @@ router.post('/:version/password/reset', function (req, res, next) {
 });
 
 router.post('/:version/register', function (req, res, next) {
-    res.json('Register')
+    let rules = {
+        'email': 'required|email',
+        'name': 'required',
+        'password': 'required|min:8',
+    }
+    new Validator(req.body, rules)
+    .validate()
+    .then(() => {
+        new User()
+        .save(req.body)
+        .then(user => {
+            res.json(user)
+        })
+        .catch(err => {
+            res.json(err, 500)
+        })
+    }).catch(messages => {
+        res.status(422).json(messages)
+    })
+
 });
 
 router.get('/:version/posts', function (req, res, next) {

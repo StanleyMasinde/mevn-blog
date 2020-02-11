@@ -10,4 +10,10 @@ var connection = db.createConnection({
     password: config.DATABASE_PASSWORD,
     database: config.DATABASE_NAME
 })
+
+connection.connect((err) => {
+    if (err) {
+        throw err
+    }
+})
 module.exports = connection

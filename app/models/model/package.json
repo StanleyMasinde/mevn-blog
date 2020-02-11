@@ -2,6 +2,7 @@
     "name": "model",
     "version": "1.0.0",
     "private": true,
+    "main": "Model.js",
     "keywords": [
         "ORM",
         "Model"

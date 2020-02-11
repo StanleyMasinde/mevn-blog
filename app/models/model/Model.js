@@ -1,9 +1,9 @@
 /**
  * Model
  */
+
 var pluralize = require('pluralize')
 var connection = require('../database')
-var bcrypt = require('bcrypt');
 class Model {
     table = this.instanceTable()
     key = 'id'
@@ -44,7 +44,7 @@ class Model {
                 } else {
                     resolve(results)
                 }
-                connection.end()
+
             })
         })
         return transaction
@@ -76,7 +76,7 @@ class Model {
                 } else {
                     resolve(results[0])
                 }
-                connection.end()
+
             })
         })
         return transaction
@@ -121,11 +121,6 @@ class Model {
      * @param {String} query 
      */
     instanceQuery(query, data) {
-        connection.connect((err) => {
-            if (err) {
-                console.error(err);
-            }
-        })
         let transaction = new Promise((resolve, reject) => {
             connection.query({
                 sql: query,
@@ -136,7 +131,7 @@ class Model {
                 } else {
                     resolve(results)
                 }
-                connection.end()
+
             })
         })
         return transaction
