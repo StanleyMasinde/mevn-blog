@@ -48,7 +48,7 @@ describe('API AUTH LINKS', () => {
 
     it('Register should accept post requests', done => {
         chai.request(server).post('/api/v1/register').end((err, result) => {
-            result.should.have.status(200)
+            result.should.have.status(422)
             done(err)
         })
 
