@@ -13,7 +13,7 @@ var connection = db.createConnection({
 
 connection.connect((err) => {
     if (err) {
-        throw err
+        console.log(err)
     }
 })
 module.exports = connection
