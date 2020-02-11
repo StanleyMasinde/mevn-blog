@@ -29,11 +29,6 @@ class Model {
      * @param {String} query 
      */
     static query(query, data) {
-        connection.connect((err) => {
-            if (err) {
-                console.error(err);
-            }
-        })
         let transaction = new Promise((resolve, reject) => {
             connection.query({
                 sql: query,

@@ -3,6 +3,7 @@ let chai = require("chai");
 let chaiHttp = require("chai-http");
 let server = require("../app");
 let should = chai.should();
+var connection = require('../app/models/database')
 chai.use(chaiHttp);
 
 describe('APPLICATION REQUESTS', () => {
@@ -80,3 +81,4 @@ describe('API POSTS', () => {
 
     })
 })
+connection.end()
