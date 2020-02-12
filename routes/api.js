@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var Post = require('../app/models/Post')
 var User = require('../app/models/User')
-var Validator = require('../app/validator/validator')
+var Validator = require('mevn-validator')
 
 //The root of the api it does nothing
 router.get('/:version', function (req, res, next) {
