@@ -13,5 +13,10 @@
     "mevn"
   ],
   "author": "Stanley Masinde",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "boxen": "^4.2.0",
+    "chalk": "^3.0.0",
+    "yargs": "^15.1.0"
+  }
 }
