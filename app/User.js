@@ -1,4 +1,4 @@
-var { Model } = require('./orm')
+var { Model } = require('mevn-orm')
 var passport = require('passport')
 
 class User extends Model {

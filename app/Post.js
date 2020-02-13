@@ -1,4 +1,4 @@
-var { Model } = require('./orm')
+var { Model } = require('mevn-orm')
 
 class Post extends Model {
     fillable = [
