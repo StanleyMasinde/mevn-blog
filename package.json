@@ -18,6 +18,7 @@
     "bootstrap-vue": "^2.4.0",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
+    "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "~4.16.1",
     "mevn-validator": "^1.0.2",

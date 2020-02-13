@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var Post = require('../app/models/Post')
-var User = require('../app/models/User')
+var Post = require('../app/Post')
+var User = require('../app/User')
 var Validator = require('mevn-validator')
 
 //The root of the api it does nothing

@@ -3,7 +3,7 @@
  */
 
 var pluralize = require('pluralize')
-var connection = require('../database')
+var connection = require('../database/database')
 class Model {
     table = this.instanceTable()
     key = 'id'

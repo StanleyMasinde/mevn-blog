@@ -1,6 +1,5 @@
-var Model = require('./model/Model')
+var { Model } = require('./orm')
 var passport = require('passport')
-
 
 class User extends Model {
     fillable = [

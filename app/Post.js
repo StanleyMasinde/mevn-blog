@@ -1,5 +1,4 @@
-var Model = require('./model/Model')
-
+var { Model } = require('./orm')
 
 class Post extends Model {
     fillable = [
