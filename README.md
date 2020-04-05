@@ -11,9 +11,12 @@ A simple Bloggin system(For Educational Purposes). *Do not use this app in produ
 
 Feel Free To add Your Modifications
 
+
 ### !! Disclaimer !!
 This App/Repo is for beginers who want to explore This MEVN Stack It should not be used in production.
 I will not be liable for any harm caused
+
+# If We Share the same dream 🌃, Please consider using ADONISJs. I've Settled for that. This project is not abandoned though, I'll be updating it whenever I get time
 
 _Happy Coding 😎_
 
