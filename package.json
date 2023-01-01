@@ -25,7 +25,7 @@
     "chai-http": "^4.3.0",
     "cross-env": "^7.0.0",
     "laravel-mix": "^5.0.1",
-    "mocha": "^7.0.1",
+    "mocha": "^10.2.0",
     "resolve-url-loader": "^3.1.0",
     "sass": "^1.25.0",
     "sass-loader": "^8.0.2",
